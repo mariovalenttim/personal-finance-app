@@ -1,6 +1,10 @@
 import '../Login.css'
 
+import CreateAccount from '../js/functions';
+
 function Login(){
+    
+
     return <>
         <main>
             <div className='div-login'>
@@ -15,7 +19,7 @@ function Login(){
                 </div>
                 <div className='login-account'>
                     <button className='login-request'>Acessar</button>
-                    <p className='new-account'>Criar conta</p>
+                    <p className='new-account' onClick={CreateAccount()}>Criar conta</p>
                 </div>
             </div>
         </main>
