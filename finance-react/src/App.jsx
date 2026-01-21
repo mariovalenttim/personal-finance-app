@@ -6,6 +6,7 @@ import './App.css'
 
 import CreatedBy from './components/CreatedBy'
 import Login from './components/Login'
+// import Despesas from './Despesas'
 
 
 function App() {
@@ -16,9 +17,10 @@ function App() {
       <h1>APP FINANCE</h1>
       <Login/>
       <CreatedBy/>
+      <hr />
+      {/* <Despesas /> */}
     </>
   )
 }
 
 export default App
-
