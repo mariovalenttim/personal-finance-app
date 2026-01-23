@@ -1,8 +1,9 @@
 import '../Login.css'
 
-import CreateAccount from '../js/functions';
+import CreateAccountjs from '../js/functions';
 
 function Login(){
+    
     
 
     return <>
@@ -18,8 +19,8 @@ function Login(){
                     <p className='new-password'>esqueceu a senha?</p>
                 </div>
                 <div className='login-account'>
-                    <button className='login-request'>Acessar</button>
-                    <p className='new-account' onClick={CreateAccount()}>Criar conta</p>
+                    <button className='login-request' onClick={Validationjs()}>Acessar</button>
+                    <p className='new-account' onClick={CreateAccountjs()}>Criar conta</p>
                 </div>
             </div>
         </main>
