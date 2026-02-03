@@ -1,11 +1,18 @@
 import '../Login.css'
-
-import CreateAccountjs from '../js/functions';
+import { Navigate, useNavigate } from 'react-router-dom'
 
 function Login(){
     
-    
+    const navigate = useNavigate()
 
+    function CreateAccountjs(){
+        navigate('/CreateAccount')
+    }
+
+    function Validationjs(){
+        alert('Não é possivel acessar sua conta!')
+    }   
+    
     return <>
         <main>
             <div className='div-login'>
@@ -19,8 +26,8 @@ function Login(){
                     <p className='new-password'>esqueceu a senha?</p>
                 </div>
                 <div className='login-account'>
-                    <button className='login-request' onClick={Validationjs()}>Acessar</button>
-                    <p className='new-account' onClick={CreateAccountjs()}>Criar conta</p>
+                    <button className='login-request' onClick={() => Validationjs()}>Acessar</button>
+                    <p className='new-account' onClick={() => CreateAccountjs()}>Criar conta</p>
                 </div>
             </div>
         </main>

@@ -17,7 +17,7 @@ function CreateAccount(){
                     <input type="password" />
                 </div>
                 <div className='login-account'>
-                    <button className='login-request'>Acessar</button>
+                    <button className='login-request'>Criar conta</button>
                 </div>
             </div>
         </main>
