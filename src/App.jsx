@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import ExpensesPieChart from './components/charts/ExpensesPieChart.jsx'
 import IncomeExpensesChart from './components/charts/IncomeExpensesChart.jsx'
+import BalanceEvolutionChart from './components/charts/BalanceEvolutionChart.jsx'
 import './App.css'
 
 export default function App() {
@@ -29,6 +30,12 @@ export default function App() {
     { mes: 'Abr', receita: 5500, despesa: 2800 },
     { mes: 'Mai', receita: 5800, despesa: 3100 }
   ]
+
+  // Dados do saldo (baseado na diferença receita - despesa)
+  const dadosSaldoMensal = dadosMensais.map(item => ({
+    mes: item.mes,
+    saldo: item.receita - item.despesa
+  }))
 
   const receitaTotal = 5000
   const despesaTotal = mockDespesas.reduce((acc, d) => acc + d.valor, 0)
@@ -103,6 +110,11 @@ export default function App() {
             <div className="card chart-card">
               <h2>Receita x Despesa Mensal</h2>
               <IncomeExpensesChart dados={dadosMensais} />
+            </div>
+
+            <div className="card chart-card">
+              <h2>Evolução do Saldo</h2>
+              <BalanceEvolutionChart dados={dadosSaldoMensal} />
             </div>
           </div>
 
